@@ -36,7 +36,7 @@ ul{
 header {
     position: sticky;
     top: 0px;
-    background-color: rgb(219, 9, 234);
+    background-color: rgba(185, 4, 4, 0.778);
     width: 100vw;
 }
 .header__logo {
@@ -122,7 +122,7 @@ div {
 
 .img-villanos {
     background-color: rgb(14, 11, 114)
-    width: 600px;
+    width: 600PX;
     height: 315px;
     margin: 10px 10px 10px 10px;
     padding: 10px 10px 10px 10px;
