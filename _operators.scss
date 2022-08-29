@@ -1,0 +1,92 @@
+/* CONDICIONAL IF */
+
+@if (condicion a cumplir)  {
+    /* CODIGO EN CASO DE QUE SE CUMPLA LA CONDICION */
+} @else {
+    /* EN CASO DE QUE NO SE CUMPLA */
+}
+
+/* MAP = COLECCION DE VARIABLES (CLAVE-VALOR)*/
+
+$redes:(
+    twitter: lightblue,
+    facebook: blue,
+    instagram: rgb(170, 63, 208),
+    tiktok:  black
+);
+
+/* EACH - CADA UNO */
+@each $name, $color in $redes {
+    .color-#{$name}{
+        background-color: #{$color};
+        @if ($name == twitter ) {
+            font-size: 32px;
+        } @else {
+            /* NO HAGO NADA */
+        }
+    }
+}
+
+
+
+$titulos:(
+    h1: 3rem,
+    h2: 2rem,
+    h3: 1rem
+);
+
+@each $title, $size in $titulos {
+    .tamaño-#{$title} {
+        font-size: #{$size};
+        @if ($size <= 2rem){
+            color: red;
+        }
+    }
+}
+
+
+$imagenes: (
+    camisas: url('../resources/agachado.jpg'),
+    pantalones: url('../resources/sinpoderes.webp'),
+    spiderman: url('../resources/spider\ man\ andrew\ garfield.jpg')
+);
+
+
+@each $img, $url in $imagenes{
+    .img-#{$img} {
+        background-image: #{$url};
+        @if ($img == pizza) {
+            border: 10px solid yellow;
+        }
+    }
+}
+
+/* EXTEND -- EXTENDER CODIGO-- CLASES BASE QUE SEAN EXACTAMENTE IGUALES*/
+
+.background-centrado {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* MIXIN - PERMITE CREAR CLASES BASE MODIFICABLES */
+
+@mixin flex ($flex-direction, $justify, $align) {
+    flex-direction: $flex-direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin backgroumd($url, $position, $size, $repeat) {
+    background-image: url('$url');
+    background-position: $position;
+    background-size: $size;
+    background-repeat: $repeat;
+}
+
+/* FOR-- CICLO FINITO DE ITERACION */
+@for $i from 1 through 10 {
+    .col-#{$i}{
+        width:10% * $i;
+    }
+}

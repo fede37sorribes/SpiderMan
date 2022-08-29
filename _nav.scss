@@ -1,0 +1,25 @@
+.nav-link {
+    color: cornflowerblue;
+}
+
+.nav-item::before {
+    content: " ";
+    display: block;
+    width: 0px;
+    height: 10px;
+    position: absolute;
+    top: 55px;
+    border-bottom: 5px solid yellow;
+}
+
+
+.nav-item:hover::before {
+    content: " ";
+    display:block ;
+    width: 80px;
+    height: 10px;
+    position: absolute;
+    top: 55px;
+    border-bottom: 5px solid yellow;
+    transition: all 1s;
+}

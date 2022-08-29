@@ -1,0 +1,19 @@
+/* MAP */
+$card: (
+    collar: url(''),
+    correas: url(''),
+    ropita: url(''),
+    platos: url(''),
+    antipulgas: url('')
+);
+
+
+.card_base{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border:  10px solid gray;
+    border-radius: 15px;
+}
+

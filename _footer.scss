@@ -1,0 +1,39 @@
+
+footer{
+    background-image: linear-gradient(to top, rgb(3, 3, 205), rgb(190, 9, 9));
+
+    .footer{
+        &__indice{
+            grid-area: indice;
+            font-size: 16px;
+            padding-bottom: 12px;
+            background-color: rgb(154, 6, 6);
+        }
+        
+        &__mapa{
+            grid-area: mapa;
+        }
+        
+        &__redes{
+            grid-area: redes;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        
+        &__derechos{
+            grid-area: derechos;
+        }
+        
+        &__iconos{
+            width: 70px;
+            height: 70px;
+            margin: 12px;
+        }
+        
+        &__indice ul li{
+            font-size: 16px;
+            padding-bottom: 12px;
+        }
+    }
+}
